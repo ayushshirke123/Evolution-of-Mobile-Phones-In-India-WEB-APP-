@@ -52,9 +52,12 @@ header {
 /* Event Images */
 .event img {
     width: 100%;
+    max-width: 300px; /* Adjust max width for mobile screens */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
+
 
 /* Hover Effects */
 .event:hover {
@@ -157,4 +160,9 @@ button {
 
 button:hover {
     background: #ddd;
+}
+@media (max-width: 768px) {
+    .event img {
+        max-width: 80%; /* Reduce width on small screens */
+    }
 }
