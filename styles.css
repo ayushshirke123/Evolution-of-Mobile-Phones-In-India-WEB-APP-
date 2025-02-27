@@ -94,7 +94,12 @@ header {
     max-width: 1000px;
     overflow-x: auto; /* Makes table scrollable on small screens */
 }
-
+.img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-size: cover;
+}
 table {
     width: 100%;
     border-collapse: collapse;
