@@ -52,12 +52,12 @@ header {
 /* Event Images */
 .event img {
     width: 100%;
-    max-width: 300px; /* Adjust max width for mobile screens */
+    max-width: 100%; /* Ensure full responsiveness */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     transition: transform 0.3s ease;
+    object-fit: contain; /* Ensure proper fit */
 }
-
 
 /* Hover Effects */
 .event:hover {
@@ -66,7 +66,7 @@ header {
 }
 
 .event:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Mobile Optimizations */
@@ -81,13 +81,20 @@ header {
     }
 
     .event {
-        width: 90%;
+        width: 95%;
+        max-width: 400px;
     }
 
     .event h2 {
         font-size: 16px;
     }
+
+    .event img {
+        max-width: 100%; /* Ensure full responsiveness */
+        height: auto;
+    }
 }
+
 /* Style for the comparison table */
 .comparison-table {
     display: flex;
@@ -146,6 +153,12 @@ td {
     }
 }
 
+/* Ensure images inside the comparison table are responsive */
+table img {
+    max-width: 80px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Style the back button */
 button {
     background: white;
@@ -160,9 +173,4 @@ button {
 
 button:hover {
     background: #ddd;
-}
-@media (max-width: 768px) {
-    .event img {
-        max-width: 80%; /* Reduce width on small screens */
-    }
 }
